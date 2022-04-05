@@ -40,8 +40,15 @@ document.querySelector('.b-2').onclick = t2;
 // 25_24_23_22_21_20_19_18_17_16_15_14_13_12_11_10_9_8_7_
 // от 25 до 7 c шагом 1. Разделитель - нижнее подчеркивание. Задача решается с помощью цикла  while.
 
+let out3 = document.querySelector('.out-3');
 function t3() {
-
+  let x = '';
+  let i = 25;
+  while (i < 26 && i > 6) {
+    x += i + "_";
+    i--;
+  }
+  out3.innerHTML = x;
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -52,8 +59,15 @@ document.querySelector('.b-3').onclick = t3;
 // от 77 до 35 c шагом 3. Разделитель - нижнее подчеркивание. Задача решается с помощью цикла  while.
 
 
+let out4 = document.querySelector('.out-4');
 function t4() {
-
+  let x = '';
+  let i = 77;
+  while (i > 34) {
+    x += i + "_";
+    i = i - 3;
+  }
+  out4.innerHTML = x;
 }
 
 document.querySelector('.b-4').onclick = t4;
@@ -64,8 +78,20 @@ document.querySelector('.b-4').onclick = t4;
 // 1_*2_**3_*4_**5_*6_**7_*8_**9_*10_**11_*12_**13_*14_**15_*16_**17_*
 // от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и одна звездочка если число нечетное, и две звездочки если четное. Задача решается с помощью цикла  while.
 
+let out5 = document.querySelector('.out-5');
 function t5() {
-
+  let x = '';
+  let i = 1;
+  while (i < 18) {
+    if (i % 2 == 1) {
+      x += `${i}_*`;
+    }
+    else if (i % 2 == 0) {
+      x += `${i}_**`;
+    }
+    i++;
+  }
+  out5.innerHTML = x;
 }
 
 document.querySelector('.b-5').onclick = t5;
