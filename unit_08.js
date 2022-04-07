@@ -226,8 +226,16 @@ document.querySelector('.b-10').onclick = t10;
 //     one_3_4_two_
 
 
+let out11 = document.querySelector('.out-11');
 function t11() {
-
+  let x = '';
+  let allDivs = document.querySelectorAll('.div-11');
+  let i = 0;
+  while (i < allDivs.length) {
+    x += `${allDivs[i].innerHTML}_`;
+    i++;
+  }
+  out11.innerHTML = x;
 }
 
 document.querySelector('.b-11').onclick = t11;
@@ -240,7 +248,12 @@ document.querySelector('.b-11').onclick = t11;
 
 
 function t12() {
-
+  let allDivs = document.querySelectorAll('.div-12');
+  let i = 0;
+  while (i < allDivs.length) {
+    allDivs[i].style.background = 'orange';
+    i++;
+  }
 }
 
 document.querySelector('.b-12').onclick = t12;
@@ -252,7 +265,12 @@ document.querySelector('.b-12').onclick = t12;
 // применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
 function t13() {
-
+  let allInputs = document.querySelectorAll('.i-13');
+  let i = 0;
+  while (i < allInputs.length) {
+    allInputs[i].value = i + 1;
+    i++;
+  }
 }
 
 document.querySelector('.b-13').onclick = t13;
