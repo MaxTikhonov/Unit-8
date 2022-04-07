@@ -282,8 +282,16 @@ document.querySelector('.b-13').onclick = t13;
 // вывести в .out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
 
 
+let out14 = document.querySelector('.out-14');
 function t14() {
-
+  let allInputs = document.querySelectorAll('.i-14');
+  let i = 0;
+  while (i < allInputs.length) {
+    if (allInputs[i].checked) {
+      out14.innerHTML = allInputs[i].value;
+    }
+    i++;
+  }
 }
 
 document.querySelector('.b-14').onclick = t14;
@@ -293,8 +301,18 @@ document.querySelector('.b-14').onclick = t14;
 // 77_88_99_77_88_99_77_88_99_
 // Для вывода использовать цикл  while. Разделитель подчеркивание.
 
+let out15 = document.querySelector('.out-15');
 function t15() {
-
+  let x = '';
+  let a = 7;
+  let b = 8;
+  let c = 9;
+  let i = 0;
+  while (i < 3) {
+    x += `${a * 11}_${b * 11}_${c * 11}_`
+    i++;
+  }
+  out15.innerHTML = x;
 }
 
 document.querySelector('.b-15').onclick = t15;
